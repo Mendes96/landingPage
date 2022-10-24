@@ -11,83 +11,181 @@
     --cor3: #22303C;
     --cor4: #FFFFFF;
     --cor5: #8899A6;
+    --cor6: #1687ED;
+    --cor7: #A91C78;
+    --cor8: #F7EFD3;
   }
   body{
     background-color: var(--cor1);
   }
   .container{
     width: 100vw;
-    height: 600px;
-    padding: 20px;
-    display: flex;
-    gap: 10px;
+    height: 500px;
+    background-image: 
+    background-color: var(--cor3);
+    border: 2px solid var(--cor5);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 100%;
   }
   .lateral{
-    width: 250px;
-    height: 100%;
-    background-color: var(--cor2);
-    position: sticky;
-    
+    grid-column: span 1;
+    grid-row: span 1; 
+    border-right: 1px solid var(--cor4);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    border: 1px solid var(--cor5);
+    justify-content: center;
   }
-  .logo{
-    width: 200px;
-    height: 100px;
-    background-color: var(--cor5);
-    border: 2px solid var(--cor3);
-  }
-  .caixa-items{
-    width: 200px;
-    height: 200px;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-  .caixa-items > li{
+  .lateral .logo > img{
     width: 100%;
+    height: 200px;
+    object-fit: contain;
+  }
+  .lateral .caixa-items{
+    width: 200px;
+    list-style: none;
+  }
+  .lateral .caixa-items > li{
+    color: var(--cor4);
+    border-radius: 10px;
+    background-color: var(--cor3);
+    box-shadow: 1px 1px 1px var(--cor1);
     font-size: 1.5em;
     font-weight: bold;
     text-align: center;
-    color: var(--cor5);
+    margin-top: 30px;
+    cursor: pointer;
   }
   
-  .home{
+  .pagina{
+    grid-column: span 2;
+    display: flex;
+    overflow: hidden;
+    background-color: var(--cor3);
+  }
+  .page1{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-auto-rows: 100px;
+    grid-auto-columns: 100%;
+    grid-gap: 25px;
+  }
+  h1{
+    color: var(--cor4);
+    border-bottom: 2px solid var(--cor4);
     width: 70%;
-    height: 100%;
-    background-color: green;
-    position: relative;
+    justify-self: center;
+    font-size: 2em;
+    font-weight: bold;
+    grid-row: span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  .about{
-    width: 0px;
-    height: 100%;
-    background-color: blue;
-    position: relative;
-  }
-  .projetos{
-    width: 0px;
-    height: 100%;
-    background-color: red;
-    position: relative;
-  }
-  .contatos{
-    width: 0px;
-    height: 100%;
-    background-color: yellow;
-    position: relative;
-  }
-  p{
-    font-size: 5em;
-    color: purple;
-    border: 5px solid white;
+  .page1 > p{
+    width: 75%;
+    justify-self: center;
+    color: var(--cor1);
+    background-color: var(--cor8);
+    box-shadow: 1px 1px 1px var(--cor1);
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px;
+    grid-row: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
+  .page2{
+    width: 0;
+    height: 100%;
+    display: grid;
+    grid-auto-columns: 100%;
+    grid-auto-rows: 100px;
+    grid-gap: 25px;
+    overflow-y: scroll;
+  }
+  .caixa{
+    width: 80%;
+    height: 200px;
+    justify-self: center;
+    background-color: var(--cor2);
+    border-radius: 10px;
+    grid-column: span 1;
+    grid-row: span 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .caixa > img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .caixa > p{
+    width: 350px;
+    padding: 10px;
+    border-radius: 10px; 
+    color: var(--cor4);
+    font-weight: bold;
+    font-size: 1.2em;
+  }
   
+  .page3{
+    width: 0;
+    height: 100%;
+    display: grid;
+    grid-auto-columns: 100%;
+    grid-auto-rows: 100px;
+    grid-gap: 10px;
+    overflow-y: scroll;
+  }
+  .page3 .produtos{
+    grid-column: span 1;
+    grid-row: span 5;
+    
+    display: grid;
+    grid-auto-rows: 100px;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 10px;
+    justify-content: center;
+    align-content: center;
+    list-style: none;
+  }
+  .produto{
+    grid-row: span 1;
+    grid-column: span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor4);
+    border: 2px solid var(--cor6);
+    background-color: var(--cor7);
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  .preco{
+    align-self: end;
+  }
+  .produtos > h2{
+    grid-column: span 2;
+    height: 30px;
+    align-self: end;
+    border-bottom: 2px solid var(--cor4);
+    color: var(--cor4);
+    font-weight: bold;
+  }
+  .oferta{
+    grid-column: span 4;
+    grid-row: span 1;
+    background-image:
+    linear-gradient(to right, var(--cor6), var(--cor7));
+  }
   
   
   
@@ -97,5 +195,6 @@
 @media screen and (max-width: 360px){
   body{
     background-color: black;
+    display: none;
   }
 }
