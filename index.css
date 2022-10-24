@@ -1,0 +1,101 @@
+@media screen and (min-width: 768px){
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Sans-Serif;
+  }
+  :root{
+    --cor1: #15202B;
+    --cor2: #192734;
+    --cor3: #22303C;
+    --cor4: #FFFFFF;
+    --cor5: #8899A6;
+  }
+  body{
+    background-color: var(--cor1);
+  }
+  .container{
+    width: 100vw;
+    height: 600px;
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  .lateral{
+    width: 250px;
+    height: 100%;
+    background-color: var(--cor2);
+    position: sticky;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid var(--cor5);
+  }
+  .logo{
+    width: 200px;
+    height: 100px;
+    background-color: var(--cor5);
+    border: 2px solid var(--cor3);
+  }
+  .caixa-items{
+    width: 200px;
+    height: 200px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .caixa-items > li{
+    width: 100%;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    color: var(--cor5);
+  }
+  
+  .home{
+    width: 70%;
+    height: 100%;
+    background-color: green;
+    position: relative;
+  }
+  .about{
+    width: 0px;
+    height: 100%;
+    background-color: blue;
+    position: relative;
+  }
+  .projetos{
+    width: 0px;
+    height: 100%;
+    background-color: red;
+    position: relative;
+  }
+  .contatos{
+    width: 0px;
+    height: 100%;
+    background-color: yellow;
+    position: relative;
+  }
+  p{
+    font-size: 5em;
+    color: purple;
+    border: 5px solid white;
+  }
+  
+  
+  
+  
+  
+  /*////////////////*/
+}
+
+@media screen and (max-width: 360px){
+  body{
+    background-color: black;
+  }
+}
